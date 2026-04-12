@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="icon" href="https://revenant-three.vercel.app/img/passe.gif" type="image/png">
-
 <head>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://revenant-three.vercel.app/img/passe.gif" type="image/png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -254,6 +253,14 @@
       --radius: 12px;
     }
     html { scroll-behavior: smooth; }
+
+    /* Justify long paragraphs with hyphenation for clean ragged edges */
+    p, li {
+      -webkit-hyphens: auto;
+      hyphens: auto;
+      -webkit-hyphenate-limit-chars: 6 3 3;
+      hyphenate-limit-chars: 6 3 3;
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       color: var(--text);
@@ -354,7 +361,7 @@
     .hero h1 span { color: var(--gold-light); }
     .hero-free { color: var(--gold-light); font-size: 13px; font-weight: 600; margin-bottom: .75rem; }
     .hero-free strong { color: #fff; }
-    .hero-desc { color: rgba(255,255,255,.75); font-size: 15px; line-height: 1.7; margin-bottom: 1.5rem; }
+    .hero-desc { color: rgba(255,255,255,.75); font-size: 15px; line-height: 1.7; margin-bottom: 1.5rem; text-align: justify; }
     .wa-btn {
       display: inline-flex;
       align-items: center;
@@ -425,7 +432,7 @@
     .pdbb-left div { color: #5a2d00; font-size: 13px; font-weight: 600; line-height: 1.3; }
     .pdbb-left .big { font-size: 22px; font-weight: 700; }
     .pdbb-right h2 { color: #fff; font-size: 16px; font-weight: 600; margin-bottom: .25rem; }
-    .pdbb-right p { color: rgba(255,255,255,.65); font-size: 13px; line-height: 1.6; }
+    .pdbb-right p { color: rgba(255,255,255,.65); font-size: 13px; line-height: 1.6; text-align: justify; }
     .pdbb-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: .75rem; }
     .pdbb-tag { background: rgba(255,255,255,.1); color: rgba(255,255,255,.8); font-size: 11px; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,.2); }
 
@@ -531,7 +538,7 @@
     .why-num { width: 48px; height: 48px; background: rgba(45,140,255,.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; border: 1px solid rgba(45,140,255,.2); }
     .why-num svg { width: 22px; height: 22px; }
     .why-card h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: .5rem; }
-    .why-card p { font-size: 13px; color: var(--text-sec); line-height: 1.6; }
+    .why-card p { font-size: 13px; color: var(--text-sec); line-height: 1.6; text-align: justify; }
 
     /* ============================================================
        TESTIMONIALS
@@ -544,7 +551,7 @@
       padding: 1.25rem;
     }
     .testi-stars { color: var(--gold); font-size: 14px; margin-bottom: .75rem; }
-    .testi-card p { font-size: 13px; color: var(--text-sec); line-height: 1.6; margin-bottom: 1rem; font-style: italic; }
+    .testi-card p { font-size: 13px; color: var(--text-sec); line-height: 1.6; margin-bottom: 1rem; font-style: italic; text-align: justify; }
     .testi-author { display: flex; align-items: center; gap: 10px; }
     .testi-avatar { width: 36px; height: 36px; border-radius: 50%; background: rgba(45,140,255,.15); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: var(--accent); flex-shrink: 0; }
     .testi-author h4 { font-size: 13px; font-weight: 700; color: var(--text); }
@@ -560,7 +567,7 @@
     .faq-chevron { width: 18px; height: 18px; transition: transform .25s; flex-shrink: 0; color: var(--text-sec); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
     .faq-a.open { max-height: 400px; }
-    .faq-a-inner { padding: 0 1.25rem 1rem; font-size: 13px; color: var(--text-sec); line-height: 1.7; border-top: 1px solid var(--border); }
+    .faq-a-inner { padding: 0 1.25rem 1rem; font-size: 13px; color: var(--text-sec); line-height: 1.7; border-top: 1px solid var(--border); text-align: justify; }
     .faq-item.open .faq-chevron { transform: rotate(180deg); }
 
     /* ============================================================
@@ -570,9 +577,9 @@
     .seo-content h2 { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 1rem; margin-top: 2rem; }
     .seo-content h2:first-child { margin-top: 0; }
     .seo-content h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: .75rem; margin-top: 1.5rem; }
-    .seo-content p { font-size: 15px; color: var(--text-sec); line-height: 1.8; margin-bottom: 1rem; }
+    .seo-content p { font-size: 15px; color: var(--text-sec); line-height: 1.8; margin-bottom: 1rem; text-align: justify; }
     .seo-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
-    .seo-content li { font-size: 15px; color: var(--text-sec); line-height: 1.8; margin-bottom: .25rem; }
+    .seo-content li { font-size: 15px; color: var(--text-sec); line-height: 1.8; margin-bottom: .25rem; text-align: justify; }
     .seo-content strong { color: var(--text); }
     .seo-divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 
@@ -589,7 +596,7 @@
     footer { background: #08131f; padding: 2.5rem 2rem 1rem; }
     .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem; max-width: 960px; margin: 0 auto 1.5rem; }
     .footer-logo { color: #fff; font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: .75rem; }
-    .footer-desc { color: rgba(255,255,255,.45); font-size: 13px; line-height: 1.7; }
+    .footer-desc { color: rgba(255,255,255,.45); font-size: 13px; line-height: 1.7; text-align: justify; }
     .footer-col h4 { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: .75rem; }
     .footer-col a { display: block; color: rgba(255,255,255,.45); font-size: 13px; margin-bottom: .4rem; }
     .footer-col a:hover { color: rgba(255,255,255,.8); }
@@ -617,10 +624,231 @@
       .coverage-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
     }
+
+    /* ============================================================
+       ANIMATION CSS — mobile-first smooth & engaging
+       ============================================================ */
+
+    /* Keyframes */
+    @keyframes fadeSlideUp   { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeSlideDown { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes scaleIn       { from{opacity:0;transform:scale(.88)} to{opacity:1;transform:scale(1)} }
+    @keyframes bounceIn      { 0%{transform:scale(0);opacity:0} 60%{transform:scale(1.15);opacity:1} 80%{transform:scale(.95)} 100%{transform:scale(1)} }
+    @keyframes floatY        { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+    @keyframes shimmerSweep  { 0%{background-position:-400px 0} 100%{background-position:400px 0} }
+    @keyframes pulseRing     { 0%{transform:scale(1);opacity:.6} 70%,100%{transform:scale(1.55);opacity:0} }
+    @keyframes marquee       { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    @keyframes skeletonShimmer { 0%{background-position:-400px 0} 100%{background-position:400px 0} }
+    @keyframes rippleAnim    { to{transform:scale(4.5);opacity:0} }
+    @keyframes fadeIn        { from{opacity:0} to{opacity:1} }
+    @keyframes fadeSlideRight{ to{opacity:1;transform:translateX(0)} }
+
+    /* ── Hero entrance ── */
+    nav                { animation: fadeSlideDown .4s both; }
+    .hero-badge-row    { animation: fadeSlideDown .5s .1s both; }
+    .hero h1           { animation: fadeSlideUp  .55s .2s both; }
+    .hero-free         { animation: fadeSlideUp  .5s  .35s both; }
+    .hero-desc         { animation: fadeSlideUp  .5s  .45s both; }
+    .wa-btn            { animation: fadeSlideUp  .5s  .55s both; }
+    .hero-stats        { animation: fadeSlideUp  .5s  .65s both; }
+    .promo-box         { animation: scaleIn .6s .3s both, floatY 4s 1s ease-in-out infinite; }
+    .popular-badge     { animation: bounceIn .5s .8s both; }
+
+    /* Promo shimmer sweep */
+    .promo-box::after {
+      content:''; position:absolute; inset:0; border-radius:14px;
+      background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.08) 50%,transparent 100%);
+      background-size:400px 100%;
+      animation:shimmerSweep 3s 1.2s infinite; pointer-events:none;
+    }
+
+    /* Nav CTA hover sweep */
+    .nav-cta { position:relative; overflow:hidden; }
+    .nav-cta::after { content:''; position:absolute; inset:0; background:rgba(255,255,255,.15); transform:translateX(-100%); transition:transform .3s ease; }
+    .nav-cta:hover::after { transform:translateX(0); }
+    .nav-links a.nav-active { background:rgba(255,255,255,.15); color:#fff; }
+
+    /* ── Scroll-reveal ── */
+    .reveal {
+      opacity:0; transform:translateY(30px);
+      transition:opacity .55s cubic-bezier(.22,.61,.36,1), transform .55s cubic-bezier(.22,.61,.36,1);
+      will-change:opacity,transform;
+    }
+    .reveal.revealed { opacity:1; transform:none; }
+
+    .reveal-stagger > * {
+      opacity:0; transform:translateY(24px);
+      transition:opacity .5s cubic-bezier(.22,.61,.36,1), transform .5s cubic-bezier(.22,.61,.36,1);
+    }
+    .reveal-stagger.revealed > *:nth-child(1){transition-delay:.05s;opacity:1;transform:none}
+    .reveal-stagger.revealed > *:nth-child(2){transition-delay:.12s;opacity:1;transform:none}
+    .reveal-stagger.revealed > *:nth-child(3){transition-delay:.19s;opacity:1;transform:none}
+    .reveal-stagger.revealed > *:nth-child(4){transition-delay:.26s;opacity:1;transform:none}
+    .reveal-stagger.revealed > *:nth-child(5){transition-delay:.33s;opacity:1;transform:none}
+    .reveal-stagger.revealed > *:nth-child(6){transition-delay:.40s;opacity:1;transform:none}
+
+    .reveal-heading { opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease; }
+    .reveal-heading.revealed { opacity:1; transform:none; }
+
+    /* ── PDBB pulse glow ── */
+    .pdbb-left { position:relative; }
+    .pdbb-left::before { content:''; position:absolute; inset:-4px; border-radius:14px; background:var(--gold); opacity:0; animation:pulseRing 2.5s ease-out 1.5s infinite; }
+
+    /* ── Paket cards ── */
+    .paket-card {
+      transition:box-shadow .25s, border-color .25s, transform .2s cubic-bezier(.34,1.56,.64,1);
+    }
+    @media(hover:none){
+      .paket-card:active { transform:scale(.97); box-shadow:0 2px 10px rgba(0,0,0,.12); }
+    }
+    .paket-cta { transition:background .2s, transform .15s cubic-bezier(.34,1.56,.64,1), box-shadow .2s; }
+    .paket-cta:active { transform:scale(.95); }
+    .paket-cta:hover  { transform:scale(1.02); box-shadow:0 4px 12px rgba(45,140,255,.3); }
+    .paket-card.popular .paket-cta:hover { box-shadow:0 4px 12px rgba(245,166,35,.35); }
+
+    /* ── Paket image upgrade ── */
+    .paket-img {
+      height:160px !important;
+      background:linear-gradient(90deg,#1a3558 25%,#1e4a78 50%,#1a3558 75%) !important;
+      background-size:800px 100% !important;
+      animation:skeletonShimmer 1.6s infinite;
+      overflow:hidden; position:relative;
+    }
+    .paket-img.loaded { animation:none; background:var(--navy-mid) !important; }
+    .paket-img img {
+      width:100%; height:100%; object-fit:cover; object-position:center;
+      display:block; opacity:0;
+      transition:opacity .4s ease, transform .3s ease;
+    }
+    .paket-img img.img-loaded { opacity:1; }
+    .paket-card:hover .paket-img img { transform:scale(1.04); }
+    .paket-img-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to bottom,transparent 40%,rgba(13,33,55,.65) 100%);
+      pointer-events:none;
+    }
+
+    /* ── Coverage cards ── */
+    .cov-card { transition:border-color .2s, box-shadow .2s, transform .2s cubic-bezier(.34,1.56,.64,1); }
+    @media(hover:none){ .cov-card:active{ transform:scale(.97); } }
+
+    /* ── Why icon spin ── */
+    .why-num svg { transition:transform .4s cubic-bezier(.34,1.56,.64,1); }
+    .why-card:hover .why-num svg { transform:rotate(15deg) scale(1.15); }
+
+    /* ── FAQ enhancements ── */
+    .faq-item { transition:box-shadow .2s, border-color .2s; }
+    .faq-item.open { border-color:var(--accent); box-shadow:0 2px 12px rgba(45,140,255,.1); }
+    .faq-q { transition:background .15s; }
+    .faq-item.open .faq-q { background:rgba(45,140,255,.04); }
+
+    /* ── Trust bar marquee on mobile ── */
+    @media(max-width:600px){
+      .trust-bar { overflow:hidden; justify-content:flex-start; flex-wrap:nowrap;
+        -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);
+        mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%); }
+      .trust-bar-inner { display:flex; animation:marquee 14s linear infinite; width:max-content; }
+      .trust-item { flex-shrink:0; padding:.875rem 1.5rem; }
+    }
+
+    /* ── Scroll progress bar ── */
+    #progress-bar {
+      position:fixed; top:0; left:0; height:3px; width:0%;
+      background:linear-gradient(90deg,var(--accent),var(--gold));
+      z-index:9999; transition:width .1s linear; border-radius:0 2px 2px 0;
+    }
+
+    /* ── Hero stat strip ── */
+    .hero-stats { display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap; }
+    .hero-stat .num { color:var(--gold-light); font-size:22px; font-weight:700; display:block; line-height:1; }
+    .hero-stat .lbl { color:rgba(255,255,255,.6); font-size:11px; }
+
+    /* ── Floating WA button ── */
+    .wa-float { display:none; }
+    @media(max-width:768px){
+      .wa-float {
+        display:flex; align-items:center; justify-content:center;
+        position:fixed; bottom:20px; right:18px;
+        width:56px; height:56px; background:#25d366;
+        border-radius:50%; box-shadow:0 4px 16px rgba(37,211,102,.5);
+        z-index:999; animation:fadeIn .5s 1.2s both; text-decoration:none;
+      }
+      .wa-float svg { width:28px; height:28px; fill:#fff; }
+      .wa-float::before { content:''; position:absolute; inset:0; border-radius:50%; background:#25d366; animation:pulseRing 2s ease-out infinite; }
+      .wa-float:active { transform:scale(.9); }
+      .wa-float-label {
+        position:fixed; bottom:28px; right:82px;
+        background:#fff; color:#1a202c; font-size:12px; font-weight:600;
+        padding:6px 12px; border-radius:20px; box-shadow:0 2px 12px rgba(0,0,0,.15);
+        z-index:998; white-space:nowrap; opacity:0; transform:translateX(10px);
+        animation:fadeSlideRight .4s 3.5s forwards; pointer-events:none;
+      }
+      .wa-float-label::after { content:''; position:absolute; right:-6px; top:50%; transform:translateY(-50%); border:6px solid transparent; border-left-color:#fff; border-right-width:0; }
+    }
+    @media(min-width:769px){ .wa-float-label{display:none;} }
+
+    /* ── Back to top ── */
+    #back-top {
+      position:fixed; bottom:88px; right:18px;
+      width:38px; height:38px; background:var(--navy);
+      border:1px solid rgba(255,255,255,.15); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer; z-index:997; opacity:0; transform:translateY(10px);
+      transition:opacity .3s, transform .3s; pointer-events:none;
+    }
+    #back-top.visible { opacity:1; transform:translateY(0); pointer-events:auto; }
+    #back-top svg { width:16px; height:16px; stroke:rgba(255,255,255,.8); }
+    #back-top:active { transform:scale(.9); }
+    @media(min-width:769px){ #back-top{display:none;} }
+
+    /* ── Mobile paket horizontal scroll ── */
+    @media(max-width:540px){
+      .paket-grid {
+        display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch; gap:14px; padding-bottom:1rem;
+        scrollbar-width:none;
+      }
+      .paket-grid::-webkit-scrollbar{ display:none; }
+      .paket-card { flex:0 0 82vw; max-width:320px; scroll-snap-align:start; }
+      .paket-scroll-hint { display:flex; justify-content:center; gap:6px; margin-top:.75rem; }
+      .paket-scroll-hint span { width:6px; height:6px; border-radius:50%; background:var(--border); transition:background .2s, transform .2s; }
+      .paket-scroll-hint span.active { background:var(--accent); transform:scale(1.3); }
+    }
+    @media(min-width:541px){ .paket-scroll-hint{display:none;} }
+
+    /* ── Mobile testi swipe ── */
+    @media(max-width:768px){
+      .testi-grid {
+        display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch; gap:14px; padding-bottom:1rem; scrollbar-width:none;
+      }
+      .testi-grid::-webkit-scrollbar{ display:none; }
+      .testi-card { flex:0 0 85vw; scroll-snap-align:start; }
+    }
+
+    /* ── Mobile section spacing ── */
+    @media(max-width:768px){
+      .section { padding:2.5rem 1.25rem; }
+      .hero { padding:2.5rem 1.25rem 0; }
+      .pdbb-band { padding:1.25rem; }
+      .hero h1 { font-size:24px; }
+      .hero-stats { gap:1.2rem; }
+      .hero-stat .num { font-size:20px; }
+      .sec-title { font-size:22px; }
+    }
+
+    /* Respect reduced motion */
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
+      .reveal,.reveal-stagger>*{ opacity:1; transform:none; }
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="progress-bar"></div>
 
   <!-- NAV -->
   <nav aria-label="Navigasi utama">
@@ -667,6 +895,21 @@
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Chat WA: 0822-3335-3722
         </a>
+        <!-- Hero stat strip -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="num" data-count="500" data-suffix="+">500+</span>
+            <span class="lbl">Klien Surabaya</span>
+          </div>
+          <div class="hero-stat">
+            <span class="num" data-count="9" data-suffix=" Tahun">9 Tahun</span>
+            <span class="lbl">Pengalaman</span>
+          </div>
+          <div class="hero-stat">
+            <span class="num" data-count="98" data-suffix="%">98%</span>
+            <span class="lbl">Kepuasan klien</span>
+          </div>
+        </div>
       </div>
       <div class="hero-right" aria-hidden="true">
         <div class="promo-box">
@@ -681,21 +924,40 @@
 
   <!-- TRUST BAR -->
   <div class="trust-bar" role="list" aria-label="Keunggulan layanan">
-    <div class="trust-item" role="listitem">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-      <span>500+ Klien Surabaya</span>
-    </div>
-    <div class="trust-item" role="listitem">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-      <span>Garansi Resmi 1 Tahun</span>
-    </div>
-    <div class="trust-item" role="listitem">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-      <span>Same Day Installation</span>
-    </div>
-    <div class="trust-item" role="listitem">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-      <span>Pasang Dulu Baru Bayar</span>
+    <div class="trust-bar-inner">
+      <div class="trust-item" role="listitem">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span>500+ Klien Surabaya</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        <span>Garansi Resmi 1 Tahun</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Same Day Installation</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        <span>Pasang Dulu Baru Bayar</span>
+      </div>
+      <!-- duplicate for seamless loop -->
+      <div class="trust-item" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span>500+ Klien Surabaya</span>
+      </div>
+      <div class="trust-item" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        <span>Garansi Resmi 1 Tahun</span>
+      </div>
+      <div class="trust-item" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Same Day Installation</span>
+      </div>
+      <div class="trust-item" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        <span>Pasang Dulu Baru Bayar</span>
+      </div>
     </div>
   </div>
 
@@ -722,9 +984,9 @@
   <section id="coverage" aria-labelledby="coverage-heading">
     <div class="section">
       <p class="sec-label">Melayani seluruh Surabaya</p>
-      <h2 class="sec-title" id="coverage-heading">Pasang CCTV di Semua Tempat & Wilayah Surabaya</h2>
+      <h2 class="sec-title reveal-heading" id="coverage-heading">Pasang CCTV di Semua Tempat & Wilayah Surabaya</h2>
       <p class="sec-sub">Teknisi kami siap datang ke rumah, kantor, toko, gudang, hotel, dan fasilitas umum di seluruh wilayah Surabaya dan sekitarnya.</p>
-      <div class="coverage-grid">
+      <div class="coverage-grid reveal-stagger">
         <div class="cov-card">
           <div class="cov-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2d8cff" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <div><h3>Rumah Tinggal</h3><p>Perlindungan keluarga 24 jam</p></div>
@@ -757,18 +1019,16 @@
   <section id="paket" class="section-bg" aria-labelledby="paket-heading">
     <div class="section" style="max-width:1000px">
       <p class="sec-label">Harga terjangkau se-Surabaya</p>
-      <h2 class="sec-title" id="paket-heading">Paket Pasang CCTV Surabaya</h2>
+      <h2 class="sec-title reveal-heading" id="paket-heading">Paket Pasang CCTV Surabaya</h2>
       <p class="sec-sub">Semua paket sudah termasuk kabel, DVR, HDD, dan gratis instalasi di seluruh Surabaya. Pilih brand sesuai budget Anda.</p>
-      <div class="paket-grid">
+      <div class="paket-grid reveal-stagger">
 
         <article class="paket-card popular" itemscope itemtype="https://schema.org/Product">
           <div class="popular-badge">TERLARIS</div>
           <div class="paket-header"><h3 itemprop="name">Paket CCTV 2 Kamera Surabaya</h3></div>
           <div class="paket-img" aria-hidden="true">
-            <div class="cam-grid g2">
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=200&fit=crop&auto=format" alt="Paket CCTV 2 Kamera" loading="lazy" onload="this.classList.add('img-loaded');this.closest('.paket-img').classList.add('loaded')" onerror="this.onerror=null;this.src='https://placehold.co/400x200/163352/5aa8ff?text=CCTV+2+Kamera'">
+            <div class="paket-img-overlay"></div>
           </div>
           <div class="paket-body">
             <div class="spec-row"><span>DVR</span><span> - </span></div>
@@ -790,12 +1050,8 @@
         <article class="paket-card" itemscope itemtype="https://schema.org/Product">
           <div class="paket-header"><h3 itemprop="name">Paket CCTV 4 Kamera Surabaya</h3></div>
           <div class="paket-img" aria-hidden="true">
-            <div class="cam-grid g4">
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1609230878521-0b9af09aff25?w=400&h=200&fit=crop&auto=format" alt="Paket CCTV 4 Kamera" loading="lazy" onload="this.classList.add('img-loaded');this.closest('.paket-img').classList.add('loaded')" onerror="this.onerror=null;this.src='https://placehold.co/400x200/163352/5aa8ff?text=CCTV+4+Kamera'">
+            <div class="paket-img-overlay"></div>
           </div>
           <div class="paket-body">
             <div class="spec-row"><span>DVR</span><span>4 Channel</span></div>
@@ -816,14 +1072,8 @@
         <article class="paket-card" itemscope itemtype="https://schema.org/Product">
           <div class="paket-header"><h3 itemprop="name">Paket CCTV 8 Kamera Surabaya</h3></div>
           <div class="paket-img" aria-hidden="true">
-            <div class="cam-grid g3">
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=200&fit=crop&auto=format" alt="Paket CCTV 8 Kamera" loading="lazy" onload="this.classList.add('img-loaded');this.closest('.paket-img').classList.add('loaded')" onerror="this.onerror=null;this.src='https://placehold.co/400x200/163352/5aa8ff?text=CCTV+8+Kamera'">
+            <div class="paket-img-overlay"></div>
           </div>
           <div class="paket-body">
             <div class="spec-row"><span>DVR</span><span>8 Channel</span></div>
@@ -844,12 +1094,8 @@
         <article class="paket-card" itemscope itemtype="https://schema.org/Product">
           <div class="paket-header"><h3 itemprop="name">Paket CCTV 16 Kamera Surabaya</h3></div>
           <div class="paket-img" aria-hidden="true">
-            <div class="cam-grid g4">
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-              <div class="cam-dot"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.899L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1590736969596-d42eb9a14c70?w=400&h=200&fit=crop&auto=format" alt="Paket CCTV 16 Kamera" loading="lazy" onload="this.classList.add('img-loaded');this.closest('.paket-img').classList.add('loaded')" onerror="this.onerror=null;this.src='https://placehold.co/400x200/163352/5aa8ff?text=CCTV+16+Kamera'">
+            <div class="paket-img-overlay"></div>
           </div>
           <div class="paket-body">
             <div class="spec-row"><span>DVR</span><span>8 Channel</span></div>
@@ -868,6 +1114,8 @@
         </article>
 
       </div>
+      <!-- Mobile scroll hint dots -->
+      <div class="paket-scroll-hint" id="paket-dots"><span class="active"></span><span></span><span></span><span></span></div>
     </div>
   </section>
 
@@ -875,9 +1123,9 @@
   <section aria-labelledby="why-heading">
     <div class="section">
       <p class="sec-label">Manfaat utama</p>
-      <h2 class="sec-title" id="why-heading">Mengapa Bisnis di Surabaya Butuh CCTV?</h2>
+      <h2 class="sec-title reveal-heading" id="why-heading">Mengapa Bisnis di Surabaya Butuh CCTV?</h2>
       <p class="sec-sub">CCTV bukan hanya soal keamanan — ini investasi untuk ketenangan pikiran dan keberlangsungan bisnis Anda di Surabaya.</p>
-      <div class="why-grid">
+      <div class="why-grid reveal-stagger">
         <div class="why-card">
           <div class="why-num"><svg viewBox="0 0 24 24" fill="none" stroke="#2d8cff" stroke-width="1.8" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <h3>Pencegahan Kejahatan</h3>
@@ -906,9 +1154,9 @@
   <section class="section-bg" aria-labelledby="testi-heading">
     <div class="section">
       <p class="sec-label">Ulasan pelanggan Surabaya</p>
-      <h2 class="sec-title" id="testi-heading">Apa Kata Klien Kami di Surabaya?</h2>
+      <h2 class="sec-title reveal-heading" id="testi-heading">Apa Kata Klien Kami di Surabaya?</h2>
       <p class="sec-sub">Lebih dari 500 pemilik bisnis dan rumah tangga di Surabaya telah mempercayakan keamanan mereka kepada SistemAlarm.</p>
-      <div class="testi-grid">
+      <div class="testi-grid reveal-stagger">
         <div class="testi-card" itemscope itemtype="https://schema.org/Review">
           <div class="testi-stars" aria-label="5 dari 5 bintang">★★★★★</div>
           <p itemprop="reviewBody">"Pasang CCTV 4 kamera di toko saya di Jl. Darmo, Surabaya. Teknisi datang tepat waktu, rapi, hasil pemasangan sangat memuaskan. Harga sesuai penawaran, tidak ada biaya tersembunyi sama sekali."</p>
@@ -950,9 +1198,9 @@
   <section id="faq" aria-labelledby="faq-heading">
     <div class="section">
       <p class="sec-label">Pertanyaan umum</p>
-      <h2 class="sec-title" id="faq-heading">FAQ Pasang CCTV Surabaya</h2>
+      <h2 class="sec-title reveal-heading" id="faq-heading">FAQ Pasang CCTV Surabaya</h2>
       <p class="sec-sub" style="margin-bottom:2rem">Jawaban atas pertanyaan yang paling sering kami terima dari calon pelanggan di Surabaya.</p>
-      <div class="faq-wrap">
+      <div class="faq-wrap reveal">
 
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">
@@ -1077,7 +1325,7 @@
         <h4>Kontak</h4>
         <a href="tel:+6282233353722">📞 0822-3335-3722</a>
         <a href="https://wa.me/6282233353722" target="_blank" rel="nofollow">💬 CP: Admin Hamsyah</a>
-        <a href="mailto:pronterasecurindo@gmail.com">✉ info@sistemalarm.id</a>
+        <a href="/cdn-cgi/l/email-protection#78080a17160c1d0a190b1d1b0d0a11161c17381f15191114561b1715">✉ <span class="__cf_email__" data-cfemail="e28b8c848da2918b9196878f838e83908fcc8b86">[email&#160;protected]</span></a>
         <a href="#faq">FAQ</a>
       </div>
     </div>
@@ -1091,19 +1339,99 @@
     </div>
   </footer>
 
+  <!-- FLOATING WA BUTTON (mobile) -->
+  <a href="https://wa.me/6282233353722?text=Halo%20SAS%2C%20saya%20mau%20tanya%20paket%20pasang%20CCTV%20di%20Surabaya"
+     class="wa-float" target="_blank" rel="nofollow" aria-label="Chat WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- WA FLOAT LABEL -->
+  <div class="wa-float-label">Chat sekarang!</div>
+
+  <!-- BACK TO TOP -->
+  <div id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </div>
+
   <script>
+    /* 1. SCROLL PROGRESS + NAV SHRINK + BACK-TO-TOP */
+    const progBar = document.getElementById('progress-bar');
+    const backTop = document.getElementById('back-top');
+    const navEl   = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      const scrolled  = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (progBar) progBar.style.width = (scrolled / maxScroll * 100) + '%';
+      if (navEl)   { navEl.style.height = scrolled > 60 ? '50px' : '60px'; navEl.style.transition = 'height .25s ease'; }
+      if (backTop) backTop.classList.toggle('visible', scrolled > 400);
+    }, { passive: true });
+
+    /* 2. INTERSECTION OBSERVER — scroll reveal */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal, .reveal-stagger, .reveal-heading').forEach(el => io.observe(el));
+
+    /* 3. COUNTER ANIMATION */
+    function animateCount(el, target, suffix, duration) {
+      let start = 0, step = target / (duration / 16);
+      const t = setInterval(() => {
+        start = Math.min(start + step, target);
+        el.textContent = Math.floor(start) + suffix;
+        if (start >= target) clearInterval(t);
+      }, 16);
+    }
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        animateCount(el, parseInt(el.dataset.count), el.dataset.suffix || '', 1400);
+        cio.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+    /* 4. ACTIVE NAV SECTION */
+    const sio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
+          a.classList.toggle('nav-active', a.getAttribute('href') === '#' + e.target.id);
+        });
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('section[id], div[id]').forEach(s => sio.observe(s));
+
+    /* 5. FAQ ACCORDION */
     function toggleFaq(el) {
       const isOpen = el.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(f => {
-        f.classList.remove('open');
-        f.querySelector('.faq-a').classList.remove('open');
-      });
-      if (!isOpen) {
-        el.classList.add('open');
-        el.querySelector('.faq-a').classList.add('open');
-      }
+      document.querySelectorAll('.faq-item').forEach(f => { f.classList.remove('open'); f.querySelector('.faq-a').classList.remove('open'); });
+      if (!isOpen) { el.classList.add('open'); el.querySelector('.faq-a').classList.add('open'); }
     }
-  </script>
 
+    /* 6. PAKET SCROLL DOTS */
+    const paketGrid = document.querySelector('.paket-grid');
+    const dots = document.querySelectorAll('#paket-dots span');
+    if (paketGrid && dots.length) {
+      paketGrid.addEventListener('scroll', () => {
+        const cardW = (paketGrid.querySelector('.paket-card') || {}).offsetWidth || 1;
+        const idx = Math.round(paketGrid.scrollLeft / (cardW + 14));
+        dots.forEach((d, i) => d.classList.toggle('active', i === Math.min(idx, dots.length - 1)));
+      }, { passive: true });
+    }
+
+    /* 7. TOUCH RIPPLE */
+    document.querySelectorAll('.paket-card, .cov-card, .testi-card').forEach(card => {
+      card.addEventListener('touchstart', function(e) {
+        const r = document.createElement('span');
+        const rect = this.getBoundingClientRect(), t = e.touches[0];
+        r.style.cssText = `position:absolute;border-radius:50%;width:80px;height:80px;background:rgba(45,140,255,.12);left:${t.clientX-rect.left-40}px;top:${t.clientY-rect.top-40}px;transform:scale(0);pointer-events:none;animation:rippleAnim .5s ease forwards;z-index:10;`;
+        this.style.position = 'relative'; this.style.overflow = 'hidden';
+        this.appendChild(r); setTimeout(() => r.remove(), 520);
+      }, { passive: true });
+    });
+  </script>
 </body>
 </html>
