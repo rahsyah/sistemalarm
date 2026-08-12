@@ -250,22 +250,64 @@ button{font-family:inherit;cursor:pointer;border:none}
 .trust-divider{width:1px;height:36px;background:rgba(255,255,255,.1)}
 
 /* ═══════════════════════════════════════════════
-   PDBB BANNER
+   PDBB BANNER — clean elegant strip
 ═══════════════════════════════════════════════ */
-.pdbb{background:linear-gradient(90deg,#1a3a5c,#0f2d52,#1a3a5c);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:1.5rem}
-.pdbb-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.pdbb-badge{background:var(--gold);border-radius:10px;padding:.75rem 1rem;text-align:center;flex-shrink:0;min-width:110px}
-.pdbb-badge div{color:#78350f;font-size:12px;font-weight:700;line-height:1.2}
-.pdbb-badge .big{font-size:18px;font-weight:800}
-.pdbb-body{flex:1;min-width:200px}
-.pdbb-body h3{color:#fff;font-size:15px;font-weight:700;margin-bottom:.25rem}
-.pdbb-body p{color:rgba(255,255,255,.6);font-size:13px;line-height:1.6;text-align:justify}
-.pdbb-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:.625rem}
-.pdbb-tag{background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.12)}
-.pdbb-action{flex-shrink:0}
-.pdbb-action a{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:11px 20px;border-radius:9px;font-size:13px;font-weight:700;transition:background .15s,transform .15s}
-.pdbb-action a:hover{background:#059669;transform:translateY(-2px)}
-.pdbb-action a svg{width:16px;height:16px;fill:#fff}
+.pdbb{
+  background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 50%,var(--navy) 100%);
+  border-top:1px solid rgba(255,255,255,.07);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  padding:1.75rem 1.5rem;
+  position:relative;overflow:hidden;
+}
+.pdbb::before{
+  content:'';position:absolute;left:-80px;top:50%;transform:translateY(-50%);
+  width:300px;height:300px;
+  background:radial-gradient(circle,rgba(16,185,129,.1) 0%,transparent 70%);
+  pointer-events:none;
+}
+.pdbb-inner{
+  max-width:1160px;margin:0 auto;
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+  position:relative;z-index:1;
+}
+.pdbb-icon-wrap{
+  width:52px;height:52px;flex-shrink:0;
+  background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.25);
+  border-radius:14px;display:flex;align-items:center;justify-content:center;
+}
+.pdbb-icon-wrap svg{width:24px;height:24px;stroke:var(--green)}
+.pdbb-body{flex:1;min-width:220px}
+.pdbb-label{
+  display:inline-block;background:rgba(16,185,129,.15);color:#34d399;
+  font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  padding:3px 10px;border-radius:20px;border:1px solid rgba(16,185,129,.2);
+  margin-bottom:.5rem;
+}
+.pdbb-body h3{color:#fff;font-size:15px;font-weight:700;margin-bottom:.25rem;line-height:1.35}
+.pdbb-body p{color:rgba(255,255,255,.55);font-size:13px;line-height:1.5}
+.pdbb-pills{display:flex;gap:.625rem;flex-wrap:wrap;align-items:center}
+.pdbb-pills span{
+  display:inline-flex;align-items:center;gap:5px;
+  color:rgba(255,255,255,.7);font-size:12px;font-weight:600;
+}
+.pdbb-pills span svg{width:12px;height:12px;stroke:var(--green);flex-shrink:0}
+.pdbb-btn{
+  display:inline-flex;align-items:center;gap:8px;flex-shrink:0;
+  background:var(--green);color:#fff;
+  padding:11px 20px;border-radius:9px;
+  font-size:13px;font-weight:700;
+  transition:background .15s,transform .15s,box-shadow .15s;
+  white-space:nowrap;
+}
+.pdbb-btn:hover{background:#059669;transform:translateY(-2px);box-shadow:0 6px 18px rgba(16,185,129,.35)}
+.pdbb-btn svg{width:15px;height:15px;stroke:#fff;transition:transform .2s}
+.pdbb-btn:hover svg{transform:translateX(3px)}
+@media(max-width:768px){
+  .pdbb-inner{gap:1rem}
+  .pdbb-icon-wrap{display:none}
+  .pdbb-pills{gap:.5rem}
+  .pdbb-btn{width:100%;justify-content:center}
+}
 
 /* ═══════════════════════════════════════════════
    PAKET CARDS
@@ -761,24 +803,23 @@ nav{animation:heroSlideUp .4s both}
 <!-- ═══ PDBB ═══ -->
 <div class="pdbb">
   <div class="pdbb-inner">
-    <div class="pdbb-badge">
-      <div>PASANG</div><div class="big">DULU</div><div>BARU</div><div class="big">BAYAR</div>
+    <div class="pdbb-icon-wrap" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
     </div>
     <div class="pdbb-body">
-      <h3>Tidak perlu DP! Pasang dulu, bayar setelah Anda puas</h3>
-      <p>Teknisi datang ke lokasi Anda di Surabaya, memasang perangkat hingga selesai dan berfungsi optimal — barulah pembayaran dilakukan. Berlaku untuk semua paket standar.</p>
-      <div class="pdbb-tags">
-        <span class="pdbb-tag">Tanpa DP</span>
-        <span class="pdbb-tag">Bayar setelah terpasang</span>
-        <span class="pdbb-tag">Transfer · Tunai · QRIS</span>
-      </div>
+      <div class="pdbb-label">Jaminan Kepuasan</div>
+      <h3>Pasang Dulu, Bayar Setelah Puas — Tanpa DP</h3>
+      <p>Teknisi datang, pasang hingga selesai, lalu Anda bayar setelah hasil memuaskan. Tidak ada risiko untuk Anda.</p>
     </div>
-    <div class="pdbb-action">
-      <a href="https://wa.me/6282229536060?text=Saya%20mau%20pakai%20sistem%20pasang%20dulu%20baru%20bayar" target="_blank" rel="nofollow">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Minta Survei Gratis
-      </a>
+    <div class="pdbb-pills">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Tanpa DP</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Bayar setelah terpasang</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Transfer · Tunai · QRIS</span>
     </div>
+    <a href="https://wa.me/6282229536060?text=Saya%20mau%20pakai%20sistem%20pasang%20dulu%20baru%20bayar" class="pdbb-btn" target="_blank" rel="nofollow">
+      Minta Survei Gratis
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 </div>
 
